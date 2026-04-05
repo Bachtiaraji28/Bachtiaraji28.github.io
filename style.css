@@ -1,19 +1,88 @@
-:root {
---primary-color: #000000;        
---focus-color: rgb(181, 28, 20);
---transition-duration: 0.25s;
+/* Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-i.fi {
-color: var(--primary-color);
-transition: color var(--transition-duration) ease, 
-transform var(--transition-duration) ease;            
-cursor: pointer;}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-i.fi:hover,
- i.fi:focus {
-    color: var(--focus-color);
-    transform: scale(0.05);
-    /* outline: 2px solid rgba(116, 116, 106, 0.6); */
-    /* outline-offset: 2px; */
-    }
+/* Grid responsif */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+/* Card bergaya kaca */
+section {
+  background: rgba(104, 82, 82, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header bergaya kaca */
+header {
+  background: rgba(54, 58, 55, 0.192);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  margin: 20px;
+  color: #fff;
+}
+
+/* Footer bergaya kaca */
+footer {
+  background: rgba(118, 90, 90, 0.2);     
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  color: #fff;
+}
+
+/* Tombol kaca */
+button {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+/* Efek hover pada tombol */
+button:hover {
+  background: rgba(13, 0, 255, 0.4);
+}
+
+/* Responsif teks */
+h2 {
+  font-size: clamp(1rem, 10vw, 1rem);
+}
+
+p, li {
+  font-size: clamp(0.875rem, 1.5vw, 0.875rem);
+}
